@@ -184,7 +184,7 @@ printf '%s\n' "$FAKE_UNAME"
     contents = app / "Contents"
     contents.mkdir(parents=True)
     (contents / ".free-claude-code-owner").write_text(
-        "io.github.alishahryar1.free-claude-code\n",
+        "io.github.nirvagold.free-claude-code\n",
         encoding="utf-8",
     )
     desktop = home / "Desktop"
@@ -683,10 +683,10 @@ def test_readme_uninstall_uses_raw_urls_and_verification_contract() -> None:
 
     assert (
         'curl -fsSL "https://raw.githubusercontent.com/'
-        'Alishahryar1/free-claude-code/main/scripts/uninstall.sh" | sh'
+        'nirvagold/free-claude-code/main/scripts/uninstall.sh" | sh'
     ) in text
     assert (
         '& ([scriptblock]::Create((irm "https://raw.githubusercontent.com/'
-        'Alishahryar1/free-claude-code/main/scripts/uninstall.ps1")))'
+        'nirvagold/free-claude-code/main/scripts/uninstall.ps1")))'
     ) in text
     assert "verifies every FCC command is gone" in text
