@@ -48,6 +48,11 @@ CEREBRAS_DEFAULT_BASE = "https://api.cerebras.ai/v1"
 SAMBANOVA_DEFAULT_BASE = "https://api.sambanova.ai/v1"
 # Kilo.ai gateway OpenAI-compatible Chat Completions API.
 KILO_DEFAULT_BASE = "https://api.kilo.ai/api/gateway"
+# Infron inference routing gateway OpenAI-compatible Chat Completions API.
+# Model names keep their provider prefix, e.g. anthropic/claude-sonnet-4.6.
+INFRON_DEFAULT_BASE = "https://llm.onerouter.pro/v1"
+# Puter AI gateway OpenAI-compatible Chat Completions API.
+PUTER_DEFAULT_BASE = "https://api.puter.com/puterai/openai/v1"
 OPENAI_CODEX_DEFAULT_BASE = "https://chatgpt.com/backend-api/codex"
 
 
@@ -270,6 +275,24 @@ PROVIDER_CATALOG: dict[str, ProviderDescriptor] = {
         credential_attr="kilo_api_key",
         default_base_url=KILO_DEFAULT_BASE,
         proxy_attr="kilo_proxy",
+    ),
+    "infron": ProviderDescriptor(
+        provider_id="infron",
+        display_name="Infron",
+        credential_env="INFRON_API_KEY",
+        credential_url="https://infron.ai/login",
+        credential_attr="infron_api_key",
+        default_base_url=INFRON_DEFAULT_BASE,
+        proxy_attr="infron_proxy",
+    ),
+    "puter": ProviderDescriptor(
+        provider_id="puter",
+        display_name="Puter",
+        credential_env="PUTER_API_KEY",
+        credential_url="https://puter.com/dashboard",
+        credential_attr="puter_api_key",
+        default_base_url=PUTER_DEFAULT_BASE,
+        proxy_attr="puter_proxy",
     ),
     "minimax": ProviderDescriptor(
         provider_id="minimax",

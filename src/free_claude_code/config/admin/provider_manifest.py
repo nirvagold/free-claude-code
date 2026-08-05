@@ -84,6 +84,24 @@ _PROVIDER_FIELD_OVERRIDES: dict[str, dict[str, Any]] = {
             "at models.github.ai."
         ),
     },
+    "INFRON_API_KEY": {
+        "label": "Infron API Key",
+        "description": (
+            "Infron inference routing gateway key from infron.ai. OpenAI-compatible "
+            "Chat Completions at llm.onerouter.pro/v1; model names keep their "
+            "provider prefix, e.g. anthropic/claude-sonnet-4.6."
+        ),
+    },
+    "PUTER_API_KEY": {
+        "label": "Puter API Key",
+        "description": (
+            "Puter AI token created at puter.com/dashboard. OpenAI-compatible Chat "
+            "Completions at api.puter.com/puterai/openai/v1; model ids like "
+            "claude-sonnet-5 are used without a provider prefix. Puter exposes no "
+            "model-list endpoint, so enter MODEL values manually, e.g. "
+            "puter/claude-sonnet-5."
+        ),
+    },
     "ZAI_API_KEY": {
         "label": "Z.ai API Key",
         "description": "Z.ai Coding Plan API key.",

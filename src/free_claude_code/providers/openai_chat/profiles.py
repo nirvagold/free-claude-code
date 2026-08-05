@@ -257,6 +257,22 @@ OPENAI_CHAT_PROFILES: dict[str, OpenAIChatProfile] = {
         ),
         user_agent="free-claude-code",
     ),
+    "infron": OpenAIChatProfile(
+        _policy(
+            "INFRON",
+            ReasoningReplayMode.REASONING_CONTENT,
+            default_max_tokens=ANTHROPIC_DEFAULT_MAX_OUTPUT_TOKENS,
+        ),
+        NO_REASONING,
+    ),
+    "puter": OpenAIChatProfile(
+        _policy(
+            "PUTER",
+            ReasoningReplayMode.REASONING_CONTENT,
+            default_max_tokens=ANTHROPIC_DEFAULT_MAX_OUTPUT_TOKENS,
+        ),
+        NO_REASONING,
+    ),
     "minimax": OpenAIChatProfile(
         _policy(
             "MINIMAX",
